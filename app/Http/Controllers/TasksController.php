@@ -33,6 +33,7 @@ class TasksController extends Controller
         $data   = $request->validated();
         if($data['status'] == 'completed'){
             $data['completed_at'] = now()->format('Y-m-d');
+            $data['status'] = $data['completed_at'] > $data['due_date'] ? 'delays' : $data['status'];
         }
         $upsert = Tasks::upsert(
             [$data],

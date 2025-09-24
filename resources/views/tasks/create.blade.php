@@ -48,7 +48,7 @@
                                         <label for="due_date" class="form-label">Due Date</label>
                                         <input type="date" {{$read_only}} class="form-control" id="due_date" name="due_date" value="{{old('due_date', isset($tasks) ? $tasks?->due_date?->format('Y-m-d') : '')}}">
                                     </div>
-                                    @if(isset($tasks) && Auth::user()->hasRole('employee') && $tasks?->status->value != 'completed')
+                                    @if(isset($tasks) && Auth::user()->hasRole('employee') && $tasks?->status->value != 'completed' && $tasks?->completed_at == null)
                                     <div class="col-md-4 mb-3">
                                         <label for="status" class="form-label">Status</label>
                                         <select name="status" id="status" class="form-control form-select">

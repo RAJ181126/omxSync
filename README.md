@@ -10,7 +10,7 @@ It provides a dashboard to track tasks, attendance, and automatically calculate 
 - 🏅 Automatic employee grading system based on performance & attendance  
 
 ## Tech Stack
-- [Laravel](https://laravel.com/) 10+  
+- [Laravel](https://laravel.com/) 12.0  
 - [MySQL](https://www.mysql.com/)  
 - [Bootstrap](https://getbootstrap.com/) for UI  
 - [Chart.js](https://www.chartjs.org/) for graphs  
